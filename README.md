@@ -1,5 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/7fc5ghd77g42xqxj?svg=true)](https://ci.appveyor.com/project/ajoq/ra-2-events-state-2-2-layouts)
-
 GH pages: https://ajoq.github.io/ra-2-events-state-2.2-layouts/
 
 # Расположение товаров
