@@ -6,27 +6,27 @@ function ShopCard({ card }) {
             <div className={styles['products-item-content']}>
                 <img src={card.img} alt={card.name + ' ' + card.color} />
                 <div className={styles['products-item-text']}>
-                    <div className={styles['products-item-text-title']}>
+                    <span className={styles['products-item-text-title']}>
                         {card.name}
-                    </div>
-                    <div className={styles['products-item-text-color']}>
+                    </span>
+                    <span className={styles['products-item-text-color']}>
                         {card.color}
-                    </div>
+                    </span>
                     <div className={styles['products-item-text-bottom']}>
-                        <div
+                        <span
                             className={
                                 styles['products-item-text-bottom-price']
                             }
                         >
                             ${card.price}
-                        </div>
-                        <div
+                        </span>
+                        <button
                             className={
                                 styles['products-item-text-bottom-add-cart']
                             }
                         >
                             Add to cart
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

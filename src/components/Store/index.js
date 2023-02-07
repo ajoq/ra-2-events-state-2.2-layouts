@@ -6,23 +6,20 @@ import products from '../../data/products';
 import './index.css';
 
 function Store() {
-    const [icon, setIcon] = useState('view_list');
-    const [view, setView] = useState(<CardsView cards={products} />);
+    const [view, setView] = useState('view_list');
 
-    const handleSwitch = (e) => {
-        if (e.target.textContent === 'view_list') {
-            setIcon('view_module');
-            setView(<ListView items={products} />);
-        } else {
-            setIcon('view_list');
-            setView(<CardsView cards={products} />);
-        }
+    const handleSwitch = (view) => {
+        view === 'view_list' ? setView('view_module') : setView('view_list');
     };
 
     return (
         <div className="container">
-            <IconSwitch icon={icon} onSwitch={handleSwitch} />
-            {view}
+            <IconSwitch icon={view} onSwitch={handleSwitch} />
+            {view === 'view_list' ? (
+                <CardsView cards={products} />
+            ) : (
+                <ListView items={products} />
+            )}
         </div>
     );
 }
